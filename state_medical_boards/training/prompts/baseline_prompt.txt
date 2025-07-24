@@ -1,0 +1,136 @@
+
+
+
+
+[34m[2025-04-16T17:59:47.858773][0m
+
+[31mSystem message:[0m
+
+Your input fields are:
+1. `case_document` (str)
+Your output fields are:
+1. `reasoning` (str)
+2. `patient_mentioned` (int): 1 if the patient is mentioned in the case text (including by initials or as 'patient'), 0 otherwise. -1 if unsure.
+3. `fraud_case` (int): 1 if the case is related to fraud, 0 otherwise. -1 if unsure. Fraud is any behavior where the doctor lied to the government or an insurance company in order to increase their profits. This includes billing for services not rendered, billing for patients not seen, sending inflated invoices to receive higher reimbursement, and lying about a patient's health to get insurance to pay for a service.  Mark 1 if the doctor has been subject to any form of anti-fraud enforcement, including litigation under the false claims act, the federal health care fraud statute, the anti-kickback statute, the Stark Law; arrest or indictment for fraud; or exclusion from the Medicare program due to fraud. 
+4. `malpractice_case` (int): 1 if the case is related to medical malpractice, 0 otherwise. -1 if unsure.
+5. `dea_case` (int): 1 if the case involves the Drug Enforcement Agency, 0 otherwise. -1 if unsure.
+6. `improper_opioid_prescription` (int): 1 if the doctor improperly prescribed opioids, 0 otherwise. -1 if unsure.
+7. `improper_drug_prescription` (int): 1 if the doctor improperly prescribed any drugs (including opioids), 0 otherwise. -1 if unsure.
+8. `unfit_to_practice` (int): 1 if the doctor got into unrelated legal trouble resulting in action being taken against their license, 0 otherwise. -1 if unsure.
+9. `bad_medical_records` (int): 1 if the doctor failed to maintain adequate medical records, 0 otherwise. -1 if unsure.
+10. `license_issues` (int): 1 if the doctor faced administrative issues with their license, 0 otherwise. -1 if unsure. Voluntary relinquishment should be marked as 0.
+11. `miscellaneous_violation` (int): 1 if the doctor committed a violation that is not already specified, 0 otherwise. -1 if unsure.
+12. `other_state_action` (int): 1 if the doctor committed a violation in another state, 0 otherwise. -1 if unsure.
+13. `no_substantive_information` (int): 1 if there is no substantive information in the case text regarding the doctor's violation, 0 otherwise. -1 if unsure.
+14. `proactive` (int): 1 if someone else (agency, lawsuit, etc) got the doctor in trouble first, before the state medical board, 0 otherwise. -1 if unsure.
+All interactions will be structured in the following way, with the appropriate values filled in.
+
+[[ ## case_document ## ]]
+{case_document}
+
+[[ ## reasoning ## ]]
+{reasoning}
+
+[[ ## patient_mentioned ## ]]
+{patient_mentioned}        # note: the value you produce must be a single int value
+
+[[ ## fraud_case ## ]]
+{fraud_case}        # note: the value you produce must be a single int value
+
+[[ ## malpractice_case ## ]]
+{malpractice_case}        # note: the value you produce must be a single int value
+
+[[ ## dea_case ## ]]
+{dea_case}        # note: the value you produce must be a single int value
+
+[[ ## improper_opioid_prescription ## ]]
+{improper_opioid_prescription}        # note: the value you produce must be a single int value
+
+[[ ## improper_drug_prescription ## ]]
+{improper_drug_prescription}        # note: the value you produce must be a single int value
+
+[[ ## unfit_to_practice ## ]]
+{unfit_to_practice}        # note: the value you produce must be a single int value
+
+[[ ## bad_medical_records ## ]]
+{bad_medical_records}        # note: the value you produce must be a single int value
+
+[[ ## license_issues ## ]]
+{license_issues}        # note: the value you produce must be a single int value
+
+[[ ## miscellaneous_violation ## ]]
+{miscellaneous_violation}        # note: the value you produce must be a single int value
+
+[[ ## other_state_action ## ]]
+{other_state_action}        # note: the value you produce must be a single int value
+
+[[ ## no_substantive_information ## ]]
+{no_substantive_information}        # note: the value you produce must be a single int value
+
+[[ ## proactive ## ]]
+{proactive}        # note: the value you produce must be a single int value
+
+[[ ## completed ## ]]
+In adhering to this structure, your objective is: 
+        Extract boolean information regarding the contents of a medical board case.
+        Respond -1 for any output that is unclear.
+
+
+[31mUser message:[0m
+
+[[ ## case_document ## ]]
+Placeholder for baseline prompt
+
+Respond with the corresponding output fields, starting with the field `[[ ## reasoning ## ]]`, then `[[ ## patient_mentioned ## ]]` (must be formatted as a valid Python int), then `[[ ## fraud_case ## ]]` (must be formatted as a valid Python int), then `[[ ## malpractice_case ## ]]` (must be formatted as a valid Python int), then `[[ ## dea_case ## ]]` (must be formatted as a valid Python int), then `[[ ## improper_opioid_prescription ## ]]` (must be formatted as a valid Python int), then `[[ ## improper_drug_prescription ## ]]` (must be formatted as a valid Python int), then `[[ ## unfit_to_practice ## ]]` (must be formatted as a valid Python int), then `[[ ## bad_medical_records ## ]]` (must be formatted as a valid Python int), then `[[ ## license_issues ## ]]` (must be formatted as a valid Python int), then `[[ ## miscellaneous_violation ## ]]` (must be formatted as a valid Python int), then `[[ ## other_state_action ## ]]` (must be formatted as a valid Python int), then `[[ ## no_substantive_information ## ]]` (must be formatted as a valid Python int), then `[[ ## proactive ## ]]` (must be formatted as a valid Python int), and then ending with the marker for `[[ ## completed ## ]]`.
+
+
+[31mResponse:[0m
+
+[32m[[ ## reasoning ## ]]
+-1
+
+[[ ## patient_mentioned ## ]]
+-1
+
+[[ ## fraud_case ## ]]
+-1
+
+[[ ## malpractice_case ## ]]
+-1
+
+[[ ## dea_case ## ]]
+-1
+
+[[ ## improper_opioid_prescription ## ]]
+-1
+
+[[ ## improper_drug_prescription ## ]]
+-1
+
+[[ ## unfit_to_practice ## ]]
+-1
+
+[[ ## bad_medical_records ## ]]
+-1
+
+[[ ## license_issues ## ]]
+-1
+
+[[ ## miscellaneous_violation ## ]]
+-1
+
+[[ ## other_state_action ## ]]
+-1
+
+[[ ## no_substantive_information ## ]]
+1
+
+[[ ## proactive ## ]]
+-1
+
+[[ ## completed ## ]][0m
+
+
+
+
+

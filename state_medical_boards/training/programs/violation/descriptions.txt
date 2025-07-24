@@ -1,0 +1,2 @@
+v1: MIPROv2, light, 0 bootstrapped demo, 0 labeled demo, gpt-3.5-mini
+v2: MIPROv2, light, 1 bootstrapped demo, 1 labeled demo, gpt-4o-mini

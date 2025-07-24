@@ -1,0 +1,138 @@
+{
+  "self": {
+    "lm": null,
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Extract boolean information regarding the contents of a medical board case.\nRespond 'not sure' if any answer is unclear.",
+      "fields": [
+        {
+          "prefix": "Case Document:",
+          "description": "${case_document}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Patient Mentioned:",
+          "description": "'yes' if the patient is mentioned in the case text, 'no' otherwise."
+        },
+        {
+          "prefix": "Fraud Case:",
+          "description": "'yes' if the case is related to fraud, 'no' otherwise. Fraud is any behavior where the doctor lied to the government or an insurance company in order to increase their profits. This includes billing for services not rendered, billing for patients not seen, sending inflated invoices to receive higher reimbursement, and lying about a patient's health to get insurance to pay for a service.  Mark 'yes' if the doctor has been subject to any form of anti-fraud enforcement, including litigation under the false claims act, the federal health care fraud statute, the anti-kickback statute, the Stark Law; arrest or indictment for fraud; or exclusion from the Medicare program due to fraud."
+        },
+        {
+          "prefix": "Malpractice Case:",
+          "description": "'yes' if the case is related to medical malpractice, 'no' otherwise."
+        },
+        {
+          "prefix": "Dea Case:",
+          "description": "'yes' if the case involves the Drug Enforcement Agency, 'no' otherwise."
+        },
+        {
+          "prefix": "Improper Opioid Prescription:",
+          "description": "'yes' if the doctor improperly prescribed opioids, 'no' otherwise."
+        },
+        {
+          "prefix": "Improper Drug Prescription:",
+          "description": "'yes' if the doctor improperly prescribed any drugs (including opioids), 'no' otherwise."
+        },
+        {
+          "prefix": "Unfit To Practice:",
+          "description": "'yes' if the doctor got into unrelated legal trouble resulting in action being taken against their licence, 'no' otherwise."
+        },
+        {
+          "prefix": "Bad Medical Records:",
+          "description": "'yes' if the doctor failed to maintain adequate medical records, 'no' otherwise."
+        },
+        {
+          "prefix": "License Issues:",
+          "description": "'yes' if the doctor faced issues with their license, 'no' otherwise."
+        },
+        {
+          "prefix": "Miscellaneous Violation:",
+          "description": "'yes' if the doctor committed a violation that is not already specified, 'no' otherwise."
+        },
+        {
+          "prefix": "Other State Action:",
+          "description": "'yes' if the doctor committed a violation in another state, 'no' otherwise."
+        },
+        {
+          "prefix": "No Substantive Information:",
+          "description": "'yes' if there is no substantive information in the case text regarding the doctor's violation, 'no' otherwise."
+        },
+        {
+          "prefix": "Proactive:",
+          "description": "'yes' if someone else (agency, lawsuit, etc) got the doctor in trouble first, before the state medical board, 'no' otherwise."
+        }
+      ]
+    },
+    "extended_signature": {
+      "instructions": "You are a medical board investigator reviewing a case involving Dr. Mark Antonio Hernandez. Determine if the following statements are true based on the provided case document:\n1. Was the patient mentioned in the case text?\n2. Is the case related to fraud?\n3. Is the case related to malpractice?\n4. Does the case involve the Drug Enforcement Agency (DEA)?\n5. Did the doctor improperly prescribe opioids?\n6. Did the doctor improperly prescribe any drugs?\n7. Is the doctor unfit to practice?\n8. Did the doctor have bad medical records?\n9. Did the doctor face license issues?\n10. Did the doctor commit any miscellaneous violations?\n11. Were there actions taken against the doctor in other states?\n12. Is there no substantive information regarding the doctor's violation?\n13. Was the case proactive?",
+      "fields": [
+        {
+          "prefix": "Case Document:",
+          "description": "${case_document}"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Patient Mentioned:",
+          "description": "'yes' if the patient is mentioned in the case text, 'no' otherwise."
+        },
+        {
+          "prefix": "Fraud Case:",
+          "description": "'yes' if the case is related to fraud, 'no' otherwise. Fraud is any behavior where the doctor lied to the government or an insurance company in order to increase their profits. This includes billing for services not rendered, billing for patients not seen, sending inflated invoices to receive higher reimbursement, and lying about a patient's health to get insurance to pay for a service.  Mark 'yes' if the doctor has been subject to any form of anti-fraud enforcement, including litigation under the false claims act, the federal health care fraud statute, the anti-kickback statute, the Stark Law; arrest or indictment for fraud; or exclusion from the Medicare program due to fraud."
+        },
+        {
+          "prefix": "Malpractice Case:",
+          "description": "'yes' if the case is related to medical malpractice, 'no' otherwise."
+        },
+        {
+          "prefix": "Dea Case:",
+          "description": "'yes' if the case involves the Drug Enforcement Agency, 'no' otherwise."
+        },
+        {
+          "prefix": "Improper Opioid Prescription:",
+          "description": "'yes' if the doctor improperly prescribed opioids, 'no' otherwise."
+        },
+        {
+          "prefix": "Improper Drug Prescription:",
+          "description": "'yes' if the doctor improperly prescribed any drugs (including opioids), 'no' otherwise."
+        },
+        {
+          "prefix": "Unfit To Practice:",
+          "description": "'yes' if the doctor got into unrelated legal trouble resulting in action being taken against their licence, 'no' otherwise."
+        },
+        {
+          "prefix": "Bad Medical Records:",
+          "description": "'yes' if the doctor failed to maintain adequate medical records, 'no' otherwise."
+        },
+        {
+          "prefix": "License Issues:",
+          "description": "'yes' if the doctor faced issues with their license, 'no' otherwise."
+        },
+        {
+          "prefix": "Miscellaneous Violation:",
+          "description": "'yes' if the doctor committed a violation that is not already specified, 'no' otherwise."
+        },
+        {
+          "prefix": "Other State Action:",
+          "description": "'yes' if the doctor committed a violation in another state, 'no' otherwise."
+        },
+        {
+          "prefix": "No Substantive Information:",
+          "description": "'yes' if there is no substantive information in the case text regarding the doctor's violation, 'no' otherwise."
+        },
+        {
+          "prefix": "Proactive:",
+          "description": "'yes' if someone else (agency, lawsuit, etc) got the doctor in trouble first, before the state medical board, 'no' otherwise."
+        }
+      ]
+    }
+  }
+}
