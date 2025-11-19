@@ -1,4 +1,4 @@
-# Using Large Language Models for Massive Political Science Data Scraping
+# Large-Scale Mining and Classification of State Legislator Demographics
 
 The following report was written in the fall of 2023 for the Undergraduate
 Research Opportunities Symposium at Boston University. More work has been done

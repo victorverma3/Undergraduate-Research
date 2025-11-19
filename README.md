@@ -1,6 +1,6 @@
 # Undergraduate Research
 
-## Candidate Bios
+## Large-Scale Mining and Classification of State Legislator Demographics
 
 January 2023 - May 2024
 
@@ -32,7 +32,7 @@ lobbying laws and the revolving door in politics.
 -   Professor Ray Fisman (Boston University)
 -   Professor Silvia Vannutelli (Northwestern University).
 
-## State Medical Boards
+## Identifying Physician Discipline Trends with NLP
 
 August 2024 - May 2025
 

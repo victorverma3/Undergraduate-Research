@@ -1,4 +1,4 @@
-# Analyzing Medical Violations with DSPy
+# Identifying Physician Discipline Trends with NLP
 
 ## Table of Contents
 
