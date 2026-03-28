@@ -28,17 +28,15 @@ lobbying laws and the revolving door in politics.
 
 ### Acknowledgements
 
--   Professor Jetson Leder-Luis (Boston University)
--   Professor Ray Fisman (Boston University)
--   Professor Silvia Vannutelli (Northwestern University).
+- Professor Jetson Leder-Luis (Boston University)
+- Professor Ray Fisman (Boston University)
+- Professor Silvia Vannutelli (Northwestern University).
 
 ## Identifying Physician Discipline Trends with NLP
 
 August 2024 - May 2025
 
-### Abstract
-
 ### Acknowledgements
 
--   Professor Jetson Leder-Luis (Boston University)
--   Professor Colleen Carey (Cornell University).
+- Professor Jetson Leder-Luis (Boston University)
+- Professor Colleen Carey (Cornell University).
